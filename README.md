@@ -6,7 +6,7 @@ CONAN-CLI:
 3. run: conan profile list & conan profile path default (profile default existed)
 > or
    conan profile detect --force (first conan)
-4. run: conan install . --output-folder=build --build=missing
+4. run: conan install . --output-folder=build --build=missing --profile=default
 5. modify CMakeLists.txt
 
 Windows:
