@@ -26,11 +26,10 @@ link_directories(
   ${openssl_LIB_DIRS_RELEASE}
   ${zlib_LIB_DIRS_RELEASE})
 
-if(WIN32)
-  link_libraries(libssl libcrypto crypt32 ws2_32 zlib)
-else()
-  link_libraries(ssl crypto z)
-endif()
+link_libraries(
+  ${openssl_OpenSSL_SSL_LIBS_RELEASE}
+  ${openssl_OpenSSL_Crypto_LIBS_RELEASE}
+  ${zlib_LIBS_RELEASE})
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (webcrab "webcrab.cpp" "webcrab.h")

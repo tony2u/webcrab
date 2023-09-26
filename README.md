@@ -13,14 +13,20 @@ Windows:
 1. cd build
 >   #assuming Visual Studio 17 2022 is your VS version and that it matches your default profile
 2. cmake .. -G "Visual Studio 17 2022" -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake
+>   ...
+>   -- Configuring done
+>   -- Generating done
 3. cmake --build . --config Release
 >   ...
->   [100%] Built target webcrab
+>   webcrab.vcxproj -> D:\Projects\webcrab\build\Release\webcrab.exe
 4. Release\webcrab.exe
 
 Linux and macOS:
 1. cd build
 2. cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
+>   ...
+>   -- Configuring done
+>   -- Generating done
 3. cmake --build .
 >   ...
 >   [100%] Built target webcrab
