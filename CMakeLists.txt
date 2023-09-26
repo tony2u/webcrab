@@ -14,7 +14,7 @@ endif()
 
 project ("webcrab")
 
-find_package(OPENSSL REQUIRED)
+find_package(OpenSSL REQUIRED)
 find_package(ZLIB REQUIRED)
 find_package(HTTPLIB REQUIRED)
 
@@ -25,7 +25,12 @@ include_directories(
 link_directories(
   ${openssl_LIB_DIRS_RELEASE}
   ${zlib_LIB_DIRS_RELEASE})
-link_libraries(libssl libcrypto crypt32 ws2_32 zlib)
+
+if(WIN32)
+  link_libraries(libssl libcrypto crypt32 ws2_32 zlib)
+else()
+  link_libraries(ssl crypto z)
+endif()
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (webcrab "webcrab.cpp" "webcrab.h")
