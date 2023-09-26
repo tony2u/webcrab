@@ -8,17 +8,17 @@ CONAN-CLI:
 5. modify CMakeLists.txt
 
 Windows:
-$ cd build
+1. cd build
 assuming Visual Studio 17 2022 is your VS version and that it matches your default profile
-$ cmake .. -G "Visual Studio 17 2022" -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake
-$ cmake --build . --config Release
+2. cmake .. -G "Visual Studio 17 2022" -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake
+3. cmake --build . --config Release
 ...
-$ Release\webcrab.exe
+4. Release\webcrab.exe
 
 Linux and macOS:
-$ cd build
-$ cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
-$ cmake --build .
+1. cd build
+2. cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
+3. cmake --build .
 ...
 [100%] Built target webcrab
-$ ./webcrab
+4. ./webcrab
