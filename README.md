@@ -9,12 +9,11 @@ CONAN-CLI:
 
 Windows:
 $ cd build
-## assuming Visual Studio 17 2022 is your VS version and that it matches your default profile
+assuming Visual Studio 17 2022 is your VS version and that it matches your default profile
 $ cmake .. -G "Visual Studio 17 2022" -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake
 $ cmake --build . --config Release
 ...
 $ Release\webcrab.exe
-
 
 Linux and macOS:
 $ cd build
