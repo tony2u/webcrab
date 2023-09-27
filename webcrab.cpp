@@ -27,7 +27,7 @@ int main()
             return true;
         },
         (httplib::Progress)[](uint64_t len, uint64_t total) {
-            // printf("%I64u / %I64u bytes => %d%% complete\n", len, total, (int)(len*100/total));
+            // printf("%llu / %llu bytes => %d%% complete\n", len, total, (int)(len*100/total));
             std::cout << std::format("{} / {} bytes => {}% complete\n", len, total, (int)(len * 100 / total));
             return true;
         });
